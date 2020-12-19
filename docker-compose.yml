@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   website:
     build:
@@ -16,7 +16,18 @@ services:
       # Changes within the container, like build output, make their way back to the host,
       # but are not strictly synchronized.
       - .:/usr/src/app:delegated
-    command: npm run dev
+      - /usr/src/app/node_modules
+      - /usr/src/app/.next
+    command: yarn run start
+
+  storybook:
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app:delegated
+    ports:
+      - 6006:6006
+    command: yarn run storybook
 
 networks:
   default:

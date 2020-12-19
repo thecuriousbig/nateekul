@@ -33,6 +33,7 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Use our .prettierrc.js file as source
     'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
