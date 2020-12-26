@@ -19,25 +19,56 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@pages/*": ["./pages/*"],
-      "@assets/*": ["./assets/*"],
-      "@layouts/*": ["./src/layouts/*"],
-      "@components/*": ["./src/components/*"],
-      "@api/*": ["./src/api/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@services/*": ["./src/services/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@locales/*": ["./src/localized/*"],
-      "@context/*": ["./src/context/*"],
-      "@queries/*": ["./src/queries/*"],
-      "@data/*": ["./src/data/*"],
-      "@typeDefs/*": ["./src/types/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@public/*": ["./public/*"]
+      "@pages/*": [
+        "./pages/*"
+      ],
+      "@assets/*": [
+        "./assets/*"
+      ],
+      "@layouts/*": [
+        "./src/layouts/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@api/*": [
+        "./src/api/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
+      "@constants/*": [
+        "./src/constants/*"
+      ],
+      "@locales/*": [
+        "./src/localized/*"
+      ],
+      "@context/*": [
+        "./src/context/*"
+      ],
+      "@queries/*": [
+        "./src/queries/*"
+      ],
+      "@data/*": [
+        "./src/data/*"
+      ],
+      "@typeDefs/*": [
+        "./src/types/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@public/*": [
+        "./public/*"
+      ]
     }
   },
   "include": [
     "next-env.d.ts",
+    "twin.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
