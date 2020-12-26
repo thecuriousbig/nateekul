@@ -3,7 +3,7 @@ import 'twin.macro'
 const Home: React.FC = () => {
   return (
     <div>
-      <h1 tw="text-pink-300">Nateekul Website</h1>
+      <h1 tw="font-sans text-3xl">Nateekul Website</h1>
     </div>
   )
 }
