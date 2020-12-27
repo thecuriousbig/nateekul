@@ -9,13 +9,17 @@ const NavBar = styled.header`
   ${tw`bg-primary-black m-0 border-none shadow-none`}
 `
 
+const FlexContainer = styled(Container)`
+  ${tw`flex flex-row flex-nowrap justify-between`}
+`
+
 const Navigator: React.FC = () => {
   return (
     <NavBar>
-      <Container css={[tw`justify-between`]}>
+      <FlexContainer>
         <NavigatorBrand />
         <NavigatorItems />
-      </Container>
+      </FlexContainer>
     </NavBar>
   )
 }

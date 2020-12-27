@@ -1,4 +1,6 @@
-module.exports = {
+const withFonts = require('next-fonts')
+
+module.exports = withFonts({
   webpack: (config, { isServer }) => {
     // Fixes npm packages that depend on `fs` module
     if (!isServer) {
@@ -7,4 +9,4 @@ module.exports = {
 
     return config
   }
-}
+})

@@ -22,9 +22,6 @@
       "@pages/*": [
         "./pages/*"
       ],
-      "@assets/*": [
-        "./assets/*"
-      ],
       "@layouts/*": [
         "./src/layouts/*"
       ],
@@ -68,6 +65,7 @@
   },
   "include": [
     "next-env.d.ts",
+    "image.d.ts",
     "twin.d.ts",
     "**/*.ts",
     "**/*.tsx"

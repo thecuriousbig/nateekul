@@ -27,8 +27,8 @@ const COLORS = {
 
 module.exports = {
   theme: {
-    fontFamily,
     extend: {
+      fontFamily,
       colors: {
         transparent: 'transparent',
         current: 'currentColor',

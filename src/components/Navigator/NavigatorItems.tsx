@@ -7,7 +7,8 @@ const Nav = styled.ul`
 `
 
 const NavItem = styled.li`
-  ${tw`mx-4 px-4 md:px-3`}
+  ${tw`mx-2 px-2`}
+  ${tw`hover:cursor-pointer hover:opacity-80`}
 `
 
 const linkStyle = css`
@@ -17,18 +18,18 @@ const linkStyle = css`
 
 const NavigatorItems: React.FC = () => {
   const menus = [
-    { id: 1, section: 'Home' },
-    { id: 2, section: 'About' },
-    { id: 3, section: 'Examples' },
-    { id: 4, section: 'Services' },
-    { id: 5, section: 'Contact' }
+    { id: 1, section: 'Home', text: 'หน้าแรก' },
+    { id: 2, section: 'About', text: 'เกี่ยวกับเรา' },
+    { id: 3, section: 'Examples', text: 'ตัวอย่างผลิตภัณฑ์' },
+    { id: 4, section: 'Services', text: 'รูปแบบการบริการ' },
+    { id: 5, section: 'Contact', text: 'ติดต่อเรา' }
   ]
   return (
     <Nav>
-      {menus.map(({ id, section }) => (
+      {menus.map(({ id, section, text }) => (
         <NavItem key={id}>
           <Link to={section} smooth="easeInOutQuad" css={linkStyle}>
-            {section}
+            {text}
           </Link>
         </NavItem>
       ))}
