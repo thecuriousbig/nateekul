@@ -1,10 +1,11 @@
-import 'twin.macro'
+import { Fragment } from 'react'
+import { Navigator } from '@components/Navigator'
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <h1 tw="font-sans text-3xl">Nateekul Website</h1>
-    </div>
+    <Fragment>
+      <Navigator />
+    </Fragment>
   )
 }
 
