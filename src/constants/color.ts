@@ -1,0 +1,26 @@
+export const COLORS = {
+  PRIMARY: {
+    BLACK: '#444',
+    WHITE: '#FFF',
+    BLUE: '#0047AB'
+  },
+  SECONDARY: {
+    BLACK100: '#DADADA',
+    BLACK200: '#B4B4B4',
+    BLACK300: '#8F8F8F',
+    BLACK400: '#696969',
+    BLACK600: '#363636',
+    BLACK700: '#292929',
+    BLACK800: '#1B1B1B',
+    BLACK900: '#0E0E0E',
+    BLUE100: '#498FF2',
+    BLUE200: '#0064F0',
+    BLUE300: '#004FBD',
+    BLUE400: '#224270'
+  },
+  OTHER: {
+    GREEN100: '#00E000',
+    GREEN200: '#00C300',
+    GREEN300: '#00B300'
+  }
+}

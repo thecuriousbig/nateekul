@@ -1,14 +1,14 @@
 import { Fragment } from 'react'
-import { Home } from '@layouts/Home'
+import { Main } from '@layouts/Main'
 import { Navigator } from '@components/Navigator'
 
-const Main: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <Fragment>
       <Navigator />
-      <Home />
+      <Main />
     </Fragment>
   )
 }
 
-export default Main
+export default Home

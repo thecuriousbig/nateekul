@@ -1,10 +1,7 @@
-import tw, { css, styled } from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 import { Link } from 'react-scroll'
-
-type Props = {
-  text: string
-  isSecondary?: boolean
-}
+import { Text } from '@components/Text'
+import { COLORS } from '@constants/color'
 
 const Brand = styled(Link)`
   ${tw`flex flex-row flex-nowrap`}
@@ -14,26 +11,22 @@ const Brand = styled(Link)`
 
 const Logo = styled.img``
 
-const titleStyles = css`
+const TitleContainer = styled.div`
   ${tw`flex flex-col flex-nowrap w-auto p-2`}
 `
-
-const Text = styled.span`
-  ${tw`text-base text-primary-white`}
-`
-
-const Title: React.FC<Props> = ({ text, isSecondary = false }) => {
-  return <Text css={isSecondary && tw`text-xs`}>{text}</Text>
-}
 
 const NavigatorBrand: React.FC = () => {
   return (
     <Brand to="Home" smooth="easeInOutQuad">
       <Logo />
-      <div css={titleStyles}>
-        <Title text="บริษัท นทีกุล จำกัด" />
-        <Title isSecondary text="NATEEKUL CO., LTD." />
-      </div>
+      <TitleContainer>
+        <Text variant="md" color={COLORS.PRIMARY.WHITE}>
+          บริษัท นทีกุล จำกัด
+        </Text>
+        <Text variant="xs" color={COLORS.PRIMARY.WHITE}>
+          NATEEKUL CO., LTD.
+        </Text>
+      </TitleContainer>
     </Brand>
   )
 }

@@ -3,17 +3,17 @@ import tw, { TwStyle } from 'twin.macro'
 
 type Props = {
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void | undefined
-  styles?: TwStyle | SerializedStyles | null
+  style?: TwStyle | SerializedStyles | null
 } & React.ButtonHTMLAttributes<HTMLButtonElement>
 
 const buttonStyle = tw`flex justify-center items-center`
 
-const Button: React.FC<Props> = ({ children, onClick, styles = null, ...props }) => {
+const ButtonWithIcon: React.FC<Props> = ({ children, onClick, style = null, ...props }) => {
   return (
-    <button onClick={onClick} css={[buttonStyle, styles]} {...props}>
+    <button {...props} onClick={onClick} css={[buttonStyle, style]}>
       {children}
     </button>
   )
 }
 
-export default Button
+export default ButtonWithIcon
