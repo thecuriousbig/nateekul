@@ -5,7 +5,7 @@ type Props = {
   sectionID: string
   height: string
   backgroundImage?: {
-    src: string
+    src?: string
     repeat?: string
     positionX?: string
     positionY?: string
@@ -26,13 +26,14 @@ const Section: React.FC<Props> = ({ children, sectionID, height, backgroundImage
       id={sectionID}
       css={[
         baseStyle(height),
-        backgroundUtils.backgroundImageStyle(
-          backgroundImage.src,
-          backgroundImage.repeat,
-          backgroundImage.positionX,
-          backgroundImage.positionY,
-          backgroundImage.attachment
-        ),
+        backgroundImage &&
+          backgroundUtils.backgroundImageStyle(
+            backgroundImage.src,
+            backgroundImage.repeat,
+            backgroundImage.positionX,
+            backgroundImage.positionY,
+            backgroundImage.attachment
+          ),
         backgroundUtils.backgroundColorStyle(backgroundColor)
       ]}
     >

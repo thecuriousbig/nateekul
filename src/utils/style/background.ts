@@ -15,7 +15,7 @@ export const backgroundImageStyle = (
   background-attachment: ${attachment};
 `
 
-export const backgroundColorStyle = (color: string): SerializedStyles => css`
+export const backgroundColorStyle = (color = 'transparent'): SerializedStyles => css`
   background-color: ${color};
 `
 

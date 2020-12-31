@@ -44,20 +44,20 @@ module.exports = {
         },
         secondary: {
           black: {
-            100: COLORS.SECONDARY.BLACK100,
-            200: COLORS.SECONDARY.BLACK200,
-            300: COLORS.SECONDARY.BLACK300,
-            400: COLORS.SECONDARY.BLACK400,
-            600: COLORS.SECONDARY.BLACK600,
-            700: COLORS.SECONDARY.BLACK700,
-            800: COLORS.SECONDARY.BLACK800,
-            900: COLORS.SECONDARY.BLACK900
+            b100: COLORS.SECONDARY.BLACK100,
+            b200: COLORS.SECONDARY.BLACK200,
+            b300: COLORS.SECONDARY.BLACK300,
+            b400: COLORS.SECONDARY.BLACK400,
+            b600: COLORS.SECONDARY.BLACK600,
+            b700: COLORS.SECONDARY.BLACK700,
+            b800: COLORS.SECONDARY.BLACK800,
+            b900: COLORS.SECONDARY.BLACK900
           },
           blue: {
-            100: COLORS.SECONDARY.BLUE100,
-            200: COLORS.SECONDARY.BLUE200,
-            300: COLORS.SECONDARY.BLUE300,
-            400: COLORS.SECONDARY.BLUE400
+            b100: COLORS.SECONDARY.BLUE100,
+            b200: COLORS.SECONDARY.BLUE200,
+            b300: COLORS.SECONDARY.BLUE300,
+            b400: COLORS.SECONDARY.BLUE400
           }
         },
         line: {

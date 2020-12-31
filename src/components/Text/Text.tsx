@@ -3,7 +3,7 @@ import { colorUtils } from '@utils/style'
 import { SerializedStyles } from '@emotion/react'
 
 type Props = {
-  variant: 'hero' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'
+  variant: 'hero' | 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'
   color: string | null
   styles?: TwStyle | SerializedStyles | null
 }
@@ -12,6 +12,8 @@ const textStyle = (variant) => {
   switch (variant) {
     case 'hero':
       return tw`font-sans text-7xl` // 72px
+    case 'xxl':
+      return tw`font-sans text-4xl` // 36px
     case 'xl':
       return tw`font-sans text-2xl` // 24px
     case 'lg':
