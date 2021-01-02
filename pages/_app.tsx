@@ -1,26 +1,20 @@
-import { Fragment } from 'react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import { Global, css } from '@emotion/react'
-import { GlobalStyles } from 'twin.macro'
+import GlobalStyle from '@styles/global'
+import { ThemeProvider } from 'styled-components'
+import theme from '@styles/theme'
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <Fragment>
+    <>
+      <GlobalStyle />
       <Head>
         <title>Nateekul</title>
       </Head>
-      <Global
-        styles={css`
-          @font-face {
-            font-family: 'supermarket';
-            src: url('/static/fonts/supermarket.ttf');
-          }
-        `}
-      />
-      <GlobalStyles />
-      <Component {...pageProps} />
-    </Fragment>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
   )
 }
 

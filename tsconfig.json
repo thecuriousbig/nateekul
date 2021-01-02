@@ -22,6 +22,9 @@
       "@pages/*": [
         "./pages/*"
       ],
+      "@styles/*": [
+        "./styles/*"
+      ],
       "@layouts/*": [
         "./src/layouts/*"
       ],
@@ -52,8 +55,8 @@
       "@data/*": [
         "./src/data/*"
       ],
-      "@typeDefs/*": [
-        "./src/types/*"
+      "@types/*": [
+        "./types/*"
       ],
       "@utils/*": [
         "./src/utils/*"
@@ -64,9 +67,7 @@
     }
   },
   "include": [
-    "next-env.d.ts",
-    "image.d.ts",
-    "twin.d.ts",
+    "types/*.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
