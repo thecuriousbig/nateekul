@@ -1,8 +1,13 @@
-import { css } from 'twin.macro'
-import { backgroundUtils } from '@utils/style'
+import styled, { css } from 'styled-components'
 
-type Props = {
-  sectionID: string
+/**
+ *  src: string,
+    repeat = 'no-repeat',
+    positionX = 'center',
+    positionY = 'center',
+    attachment = 'fixed'
+ */
+type styledProps = {
   height: string
   backgroundImage?: {
     src?: string
@@ -14,31 +19,35 @@ type Props = {
   backgroundColor?: string | null
 }
 
-const baseStyle = (height) => css`
+type Props = {
+  sectionID: string
+} & styledProps
+
+const PageSection = styled('section') <styledProps>`
   width: 100%;
-  height: ${height};
+  height: ${(props) => props.height};
   margin: auto;
+  ${({ backgroundImage }) =>
+    backgroundImage &&
+    css`
+      background-image: url(${backgroundImage.src});
+      background-repeat: ${backgroundImage.repeat ? backgroundImage.repeat : 'no-repeat'};
+      background-position-x: ${backgroundImage.positionX ? backgroundImage.positionX : 'center'};
+      background-position-y: ${backgroundImage.positionY ? backgroundImage.positionY : 'center'};
+      background-attachment: ${backgroundImage.attachment ? backgroundImage.attachment : 'scroll'};
+    `}
+  ${({ backgroundColor }) =>
+    backgroundColor &&
+    css`
+      background-color: ${backgroundColor};
+    `}
 `
 
 const Section: React.FC<Props> = ({ children, sectionID, height, backgroundImage = null, backgroundColor = null }) => {
   return (
-    <section
-      id={sectionID}
-      css={[
-        baseStyle(height),
-        backgroundImage &&
-          backgroundUtils.backgroundImageStyle(
-            backgroundImage.src,
-            backgroundImage.repeat,
-            backgroundImage.positionX,
-            backgroundImage.positionY,
-            backgroundImage.attachment
-          ),
-        backgroundUtils.backgroundColorStyle(backgroundColor)
-      ]}
-    >
+    <PageSection id={sectionID} height={height} backgroundImage={backgroundImage} backgroundColor={backgroundColor}>
       {children}
-    </section>
+    </PageSection>
   )
 }
 

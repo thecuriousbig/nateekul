@@ -1,16 +1,22 @@
-import tw, { styled, css } from 'twin.macro'
+import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import { Text } from '@components/Text'
-import { COLORS } from '@constants/color'
 
-const Nav = styled.ul`
-  ${tw`flex flex-row flex-nowrap`}
-  ${tw`justify-between items-center`}
+const Nav = styled('ul')`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
 `
 
-const NavItem = styled.li`
-  ${tw`m-2 p-2`}
-  ${tw`hover:cursor-pointer hover:opacity-80`}
+const NavItem = styled('li')`
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  :hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 `
 
 const NavigatorItems: React.FC = () => {
@@ -26,7 +32,7 @@ const NavigatorItems: React.FC = () => {
       {menus.map(({ id, section, text }) => (
         <NavItem key={id}>
           <Link to={section} smooth="easeInOutQuad">
-            <Text variant="sm" color={COLORS.PRIMARY.WHITE}>
+            <Text size="sm" color="white">
               {text}
             </Text>
           </Link>

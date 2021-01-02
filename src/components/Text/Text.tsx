@@ -1,36 +1,27 @@
-import tw, { TwStyle } from 'twin.macro'
-import { colorUtils } from '@utils/style'
-import { SerializedStyles } from '@emotion/react'
+import styled from 'styled-components'
+
+type styledProps = {
+  font?: string
+  size?: 'hero' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'
+  color?: 'black' | 'white'
+}
 
 type Props = {
-  variant: 'hero' | 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'
-  color: string | null
-  styles?: TwStyle | SerializedStyles | null
-}
+  className?: string
+} & styledProps
 
-const textStyle = (variant) => {
-  switch (variant) {
-    case 'hero':
-      return tw`font-sans text-7xl` // 72px
-    case 'xxl':
-      return tw`font-sans text-4xl` // 36px
-    case 'xl':
-      return tw`font-sans text-2xl` // 24px
-    case 'lg':
-      return tw`font-sans text-xl` // 20px
-    case 'md':
-      return tw`font-sans text-base` // 16px
-    case 'sm':
-      return tw`font-sans text-sm` // 14px
-    case 'xs':
-      return tw`font-sans text-xs` // 12px
-    default:
-      return tw`font-sans text-base`
-  }
-}
+const Span = styled('span') <styledProps>`
+  font-family: ${(props) => props.theme.font.family[props.font]};
+  font-size: ${(props) => props.theme.font.size[props.size]};
+  line-height: ${(props) => props.theme.font.lineHeight[props.size]};
+  color: ${(props) => props.theme.colors.primary[props.color.toUpperCase()]};
+  letter-spacing: 0.03rem;
+`
 
-const Text: React.FC<Props> = ({ children, variant = 'paragraph', color, styles = null }) => (
-  <span css={[textStyle(variant), colorUtils.setColor(color), styles]}>{children}</span>
+const Text: React.FC<Props> = ({ children, className, font = 'supermarket', color = 'black', size = 'md' }) => (
+  <Span className={className} font={font} size={size} color={color}>
+    {children}
+  </Span>
 )
 
 export default Text

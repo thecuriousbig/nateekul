@@ -1,23 +1,25 @@
-import { Props } from 'react'
-import tw from 'twin.macro'
+import styled from 'styled-components'
 import { Section } from '@components/Section'
 import { Container } from '@components/Container'
 import { COLORS } from '@constants/color'
 
-type Props = {}
+const SContainer = styled(Container)`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`
 
-const containerStyle = tw`flex flex-row justify-center items-center`
-
-const Divider: React.FC<Props> = () => {
+const Slogan: React.FC = () => {
   return (
-    <Section sectionID="Divider" backgroundColor={COLORS.PRIMARY.BLACK} height="16rem">
-      <Container styles={containerStyle}>
+    <Section sectionID="Slogan" backgroundColor={COLORS.PRIMARY.BLACK} height="16rem">
+      <SContainer>
         <p>a</p>
         <p>b</p>
         <p>c</p>
-      </Container>
+      </SContainer>
     </Section>
   )
 }
 
-export default Divider
+export default Slogan

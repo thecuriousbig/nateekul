@@ -1,8 +1,4 @@
-import tw from 'twin.macro'
-
-type Props = {}
-
-const Avatar: React.FC<Props> = () => {
+const Avatar: React.FC = () => {
   return <div></div>
 }
 

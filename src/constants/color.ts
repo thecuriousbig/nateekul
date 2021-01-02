@@ -18,7 +18,7 @@ export const COLORS = {
     BLUE300: '#004FBD',
     BLUE400: '#224270'
   },
-  OTHER: {
+  LINE: {
     GREEN100: '#00E000',
     GREEN200: '#00C300',
     GREEN300: '#00B300'

@@ -1,32 +1,39 @@
-import tw, { styled } from 'twin.macro'
+import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import { Text } from '@components/Text'
-import { COLORS } from '@constants/color'
 
 const Brand = styled(Link)`
-  ${tw`flex flex-row flex-nowrap`}
-  ${tw`justify-center items-center`}
-  ${tw`hover:cursor-pointer hover:opacity-80`}
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  :hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 `
 
 const Logo = styled.img``
 
-const TitleContainer = styled.div`
-  ${tw`flex flex-col flex-nowrap w-auto p-2`}
+const Title = styled('div')`
+  display: flex;
+  flex-flow: column nowrap;
+  width: auto;
+  padding: 0.5rem;
 `
 
 const NavigatorBrand: React.FC = () => {
   return (
     <Brand to="Home" smooth="easeInOutQuad">
       <Logo />
-      <TitleContainer>
-        <Text variant="md" color={COLORS.PRIMARY.WHITE}>
+      <Title>
+        <Text size="md" color="white">
           บริษัท นทีกุล จำกัด
         </Text>
-        <Text variant="xs" color={COLORS.PRIMARY.WHITE}>
+        <Text size="xs" color="white">
           NATEEKUL CO., LTD.
         </Text>
-      </TitleContainer>
+      </Title>
     </Brand>
   )
 }

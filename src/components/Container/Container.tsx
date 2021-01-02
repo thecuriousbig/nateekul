@@ -1,14 +1,23 @@
-import { SerializedStyles } from '@emotion/react'
-import tw, { TwStyle } from 'twin.macro'
+import styled from 'styled-components'
 
 type Props = {
-  styles?: TwStyle | SerializedStyles | null
+  className?: string
 }
 
-const baseContainer = tw`w-full h-full xl:max-w-screen-lg mx-auto px-4`
+const ContainerWithStyle = styled('div')`
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @media (min-width: ${(props) => props.theme.screen.xl}) {
+    max-width: ${(props) => props.theme.screen.lg};
+  }
+`
 
-const Container: React.FC<Props> = ({ children, styles = null }) => {
-  return <div css={[baseContainer, styles]}>{children}</div>
+const Container: React.FC<Props> = ({ children, className }) => {
+  return <ContainerWithStyle className={className}>{children}</ContainerWithStyle>
 }
 
 export default Container
