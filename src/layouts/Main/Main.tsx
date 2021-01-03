@@ -1,11 +1,8 @@
 import styled from 'styled-components'
-import Image from 'next/image'
 import { Section } from '@components/Section'
 import { Container } from '@components/Container'
 import { Text } from '@components/Text'
-import { Button } from '@components/Button'
 import { LineButton } from '@components/LineButton'
-import { COLORS } from '@constants/color'
 
 import MainBackgroundImage from '@public/static/images/main.jpg'
 
@@ -23,7 +20,7 @@ const Main: React.FC = () => {
   return (
     <Section sectionID="Main" height="32rem" backgroundImage={{ src: MainBackgroundImage, positionX: 'left' }}>
       <SContainer>
-        <Text size="hero" color="white">
+        <Text size="hero" color="white" font="Supermarket">
           รับขึ้นรูปบรรจุภัณฑ์พลาสติก
         </Text>
         <Text size="lg" color="white">
