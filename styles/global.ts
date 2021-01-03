@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    font-family: Supermarket, Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Roboto, Supermarket, 'Open Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-stroke: 0.30px;

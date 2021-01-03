@@ -17,7 +17,7 @@ const Span = styled('span')<styledProps>`
   color: ${(props) => props.theme.colors.primary[props.color.toUpperCase()]};
 `
 
-const Text: React.FC<Props> = ({ children, className, font = 'Roboto', color = 'black', size = 'md' }) => (
+const Text: React.FC<Props> = ({ children, className, font = 'roboto', color = 'black', size = 'md' }) => (
   <Span className={className} font={font} size={size} color={color}>
     {children}
   </Span>

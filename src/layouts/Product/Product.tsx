@@ -47,7 +47,7 @@ const Title = styled(Text)`
 
 const Product: React.FC = () => {
   return (
-    <Section sectionID="Product" height="30rem" backgroundColor={COLORS.PRIMARY.WHITE}>
+    <Section sectionID="Products" height="30rem" backgroundColor={COLORS.PRIMARY.WHITE}>
       <Title color="black" size="4xl" font="Supermarket">
         ตัวอย่างผลิตภัณฑ์
       </Title>

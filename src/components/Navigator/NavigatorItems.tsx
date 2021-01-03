@@ -21,9 +21,9 @@ const NavItem = styled('li')`
 
 const NavigatorItems: React.FC = () => {
   const menus = [
-    { id: 1, section: 'Home', text: 'หน้าแรก' },
+    { id: 1, section: 'Main', text: 'หน้าแรก' },
     { id: 2, section: 'About', text: 'เกี่ยวกับเรา' },
-    { id: 3, section: 'Examples', text: 'ตัวอย่างผลิตภัณฑ์' },
+    { id: 3, section: 'Products', text: 'ตัวอย่างผลิตภัณฑ์' },
     { id: 4, section: 'Services', text: 'รูปแบบการบริการ' },
     { id: 5, section: 'Contact', text: 'ติดต่อเรา' }
   ]
@@ -31,7 +31,7 @@ const NavigatorItems: React.FC = () => {
     <Nav>
       {menus.map(({ id, section, text }) => (
         <NavItem key={id}>
-          <Link to={section} smooth="easeInOutQuad">
+          <Link to={section} smooth="easeInOutQuint">
             <Text size="sm" color="white">
               {text}
             </Text>
