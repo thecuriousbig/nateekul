@@ -25,6 +25,8 @@
     ]
   },
   "dependencies": {
+    "dotenv-webpack": "6.0.0",
+    "google-map-react": "2.1.9",
     "next": "10.0.3",
     "next-fonts": "1.5.1",
     "next-images": "1.6.2",

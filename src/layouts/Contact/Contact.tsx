@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { Section } from '@components/Section'
 import { Container } from '@components/Container'
+import { GoogleMap } from '@components/Map'
 import { Text } from '@components/Text'
 import { COLORS } from '@constants/color'
 
@@ -20,7 +21,19 @@ const servicesData = [
 ]
 
 const SContainer = styled(Container)`
+  display: flex;
+  flex-flow: row nowrap;
   padding: 2rem 0;
+`
+
+const Content = styled('div')`
+  width: 50%;
+  height: 100%;
+`
+
+const MapContainer = styled('div')`
+  width: 50%;
+  height: 100%;
 `
 
 const TextBlock = styled(Text)`
@@ -36,22 +49,27 @@ const Contact = () => {
   return (
     <Section sectionID="Contact" height="25rem" backgroundColor={COLORS.PRIMARY.BLACK}>
       <SContainer>
-        <Title size="lg" color="white">
-          ติดต่อเรา
-        </Title>
-        {contactData.map(({ id, text }) => (
-          <TextBlock size="sm" color="white" key={id}>
-            {text}
-          </TextBlock>
-        ))}
-        <Title size="lg" color="white">
-          รูปแบบบริการ
-        </Title>
-        {servicesData.map((text, index) => (
-          <TextBlock size="sm" color="white" key={index}>
-            {text}
-          </TextBlock>
-        ))}
+        <Content>
+          <Title size="lg" color="white">
+            ติดต่อเรา
+          </Title>
+          {contactData.map(({ id, text }) => (
+            <TextBlock size="sm" color="white" key={id}>
+              {text}
+            </TextBlock>
+          ))}
+          <Title size="lg" color="white">
+            รูปแบบบริการ
+          </Title>
+          {servicesData.map((text, index) => (
+            <TextBlock size="sm" color="white" key={index}>
+              {text}
+            </TextBlock>
+          ))}
+        </Content>
+        <MapContainer>
+          <GoogleMap />
+        </MapContainer>
       </SContainer>
     </Section>
   )
