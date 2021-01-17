@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, ThemedCssFunction } from 'styled-components'
 
 /**
  *  src: string,
@@ -16,7 +16,7 @@ type styledProps = {
     positionY?: string
     attachment?: string
   } | null
-  backgroundColor?: string | null
+  backgroundColor?: string | ThemedCssFunction | null
 }
 
 type Props = {
@@ -39,7 +39,7 @@ const PageSection = styled('section') <styledProps>`
   ${({ backgroundColor }) =>
     backgroundColor &&
     css`
-      background-color: ${backgroundColor};
+      background: ${backgroundColor};
     `}
 `
 

@@ -12,21 +12,26 @@ import Example4 from '@public/static/images/example4.jpg'
 const productExample = [
   {
     id: 1,
-    name: 'product1',
-    description: 'Commodo nullam aliquet viverra fermentum molestie faucibus',
+    name: 'กล่องอาหารทรงกลม',
+    description: 'กล่องพลาสติก PET ทรงกลม ขนาดเส้นผ่านศูนย์กลาง 10 ซม.',
     image: Example1
   },
-  { id: 2, name: 'product2', description: 'Velit egestas ut diam tincidunt sit pretium', image: Example2 },
+  {
+    id: 2,
+    name: 'ถาดพลาดติกใส่สินค้าสีขาว',
+    description: 'ถาดพลาสติก PP แข็งแรงเป็นทรง ใส่สินค้า 2x5 ช่อง ขนาด 11.5x15.5x2 ซม. ',
+    image: Example2
+  },
   {
     id: 3,
-    name: 'product3',
-    description: 'Enim magnis tristique suspendisse ullamcorper ipsum eleifend',
+    name: 'ถาดพลาดติกใส่สินค้าสีใส',
+    description: 'ถาดพลาสติก PET ใสเป็นทรง ใส่สินค้า 2x5 ช่อง ขนาด 11.5x15.5x1 ซม. ',
     image: Example3
   },
   {
     id: 4,
-    name: 'product4',
-    description: 'Senectus ornare augue ullamcorper vulputate metus adipiscing',
+    name: 'พลาสติก PET ตามพิมพ์',
+    description: 'พลาสติก PET ใสเป็นทรง ขึ้นรูปตามพิมพ์ สามารถออกแบบเองได้',
     image: Example4
   }
 ]
@@ -41,6 +46,7 @@ const CardList = styled('div')`
 `
 
 const Title = styled(Text)`
+  margin-top: 2rem;
   display: block;
   text-align: center;
 `

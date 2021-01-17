@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styled from 'styled-components'
 import { Section } from '@components/Section'
 import { Container } from '@components/Container'
@@ -37,13 +38,13 @@ const SloganText = styled(Text)`
   padding: 1rem 0.5rem;
 `
 
-const Icon = styled('img')``
+const Icon = styled(Image)``
 
 const Slogan: React.FC = () => {
   const slogan = [
-    { id: 1, text: 'บริการรวมเร็วฉับไว', icon: '' },
-    { id: 2, text: 'ใส่ใจในคุณภาพ', icon: '' },
-    { id: 3, text: 'ยินดีให้คำปรึกษาทุกท่าน', icon: '' }
+    { id: 1, text: 'บริการรวมเร็วฉับไว', icon: '/static/icons/slogan_1.svg' },
+    { id: 2, text: 'ใส่ใจในคุณภาพ', icon: '/static/icons/slogan_2.svg' },
+    { id: 3, text: 'ยินดีให้คำปรึกษาทุกท่าน', icon: '/static/icons/slogan_3.svg' }
   ]
   return (
     <Section sectionID="Slogan" backgroundColor={COLORS.SECONDARY.BLACK800} height="16rem">
@@ -51,7 +52,7 @@ const Slogan: React.FC = () => {
         <SloganList>
           {slogan.map(({ id, text, icon }) => (
             <SloganItem key={id}>
-              <Icon />
+              <Icon src={icon} width={64} height={64} />
               <SloganText color="white" size="xl" font="Supermarket">
                 {text}
               </SloganText>

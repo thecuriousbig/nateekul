@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import { Text } from '@components/Text'
+import { Icon } from '@components/Icon'
 
 const Brand = styled(Link)`
   display: flex;
@@ -29,7 +30,7 @@ const Title = styled('div')`
 const NavigatorBrand: React.FC = () => {
   return (
     <Brand to="Home" smooth="easeInOutQuad">
-      <Logo src="/static/icons/logo.svg" height={40} width={40} />
+      <Logo src="/static/icons/logo.svg" width={40} height={40} />
       <Title>
         <Text size="md" color="white">
           บริษัท นทีกุล จำกัด

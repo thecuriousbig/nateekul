@@ -1,3 +1,4 @@
+import { css } from 'styled-components'
 import { Main } from '@layouts/Main'
 import { Navigator } from '@components/Navigator'
 import { Slogan } from '@layouts/Slogan'
@@ -14,7 +15,11 @@ const Home: React.FC = () => {
       <Main />
       <Slogan />
       <About />
-      <Section sectionID="Divider" backgroundColor={COLORS.PRIMARY.WHITE} height="10rem" />
+      <Section
+        sectionID="Divider"
+        backgroundColor="linear-gradient(180deg, rgba(196, 196, 196, 0) 43.23%, #c4c4c4 100%);"
+        height="10rem"
+      />
       <Product />
       <Contact />
     </>
