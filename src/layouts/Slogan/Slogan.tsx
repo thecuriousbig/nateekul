@@ -46,7 +46,7 @@ const Slogan: React.FC = () => {
     { id: 3, text: 'ยินดีให้คำปรึกษาทุกท่าน', icon: '' }
   ]
   return (
-    <Section sectionID="Slogan" backgroundColor={COLORS.PRIMARY.BLACK} height="16rem">
+    <Section sectionID="Slogan" backgroundColor={COLORS.SECONDARY.BLACK800} height="16rem">
       <SContainer>
         <SloganList>
           {slogan.map(({ id, text, icon }) => (

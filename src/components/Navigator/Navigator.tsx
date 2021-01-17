@@ -6,7 +6,7 @@ import { Container } from '@components/Container'
 const NavBar = styled('header')`
   width: 100%;
   position: fixed;
-  background-color: ${(props) => props.theme.colors.primary.BLACK};
+  background-color: ${(props) => props.theme.colors.secondary.BLACK900};
   margin: 0;
   border: none;
   box-shadow: none;

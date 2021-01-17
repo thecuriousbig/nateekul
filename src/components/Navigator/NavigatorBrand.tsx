@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import { Text } from '@components/Text'
@@ -13,7 +14,10 @@ const Brand = styled(Link)`
   }
 `
 
-const Logo = styled.img``
+const Logo = styled(Image)`
+  background-color: ${(props) => props.theme.colors.primary.WHITE};
+  border-radius: 50%;
+`
 
 const Title = styled('div')`
   display: flex;
@@ -25,7 +29,7 @@ const Title = styled('div')`
 const NavigatorBrand: React.FC = () => {
   return (
     <Brand to="Home" smooth="easeInOutQuad">
-      <Logo />
+      <Logo src="/static/icons/logo.svg" height={40} width={40} />
       <Title>
         <Text size="md" color="white">
           บริษัท นทีกุล จำกัด
