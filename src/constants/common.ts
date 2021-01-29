@@ -1,3 +1,4 @@
 export default {
-  NAME: 'บริษัท นทีกุล จำกัด'
+  NAME_TH: 'บริษัท นทีกุล จำกัด',
+  NAME_EN: 'NATEEKUL CO., LTD.'
 }

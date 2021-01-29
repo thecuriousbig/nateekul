@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import { Text } from '@components/Text'
 import { Icon } from '@components/Icon'
+import { useTranslation } from '@localized'
 
 const Brand = styled(Link)`
   display: flex;
@@ -28,15 +29,16 @@ const Title = styled('div')`
 `
 
 const NavigatorBrand: React.FC = () => {
+  const { t } = useTranslation('common')
   return (
     <Brand to="Home" smooth="easeInOutQuad">
       <Logo src="/static/icons/logo.svg" width={40} height={40} />
       <Title>
         <Text size="md" color="white">
-          บริษัท นทีกุล จำกัด
+          {t('name.th')}
         </Text>
         <Text size="xs" color="white">
-          NATEEKUL CO., LTD.
+          {t('name.en')}
         </Text>
       </Title>
     </Brand>

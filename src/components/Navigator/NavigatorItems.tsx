@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import { Text } from '@components/Text'
+import { useTranslation } from '@localized'
 
 const Nav = styled('ul')`
   display: flex;
@@ -20,12 +21,13 @@ const NavItem = styled('li')`
 `
 
 const NavigatorItems: React.FC = () => {
+  const { t } = useTranslation('common')
   const menus = [
-    { id: 1, section: 'Main', text: 'หน้าแรก' },
-    { id: 2, section: 'About', text: 'เกี่ยวกับเรา' },
-    { id: 3, section: 'Products', text: 'ตัวอย่างผลิตภัณฑ์' },
-    { id: 4, section: 'Services', text: 'รูปแบบการบริการ' },
-    { id: 5, section: 'Contact', text: 'ติดต่อเรา' }
+    { id: 1, section: 'Main', text: t('menu.main') },
+    { id: 2, section: 'About', text: t('menu.about') },
+    { id: 3, section: 'Products', text: t('menu.product') },
+    { id: 4, section: 'Services', text: t('menu.services') },
+    { id: 5, section: 'Contact', text: t('menu.contact') }
   ]
   return (
     <Nav>
