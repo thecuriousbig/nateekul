@@ -27,11 +27,13 @@
   "dependencies": {
     "dotenv-webpack": "6.0.0",
     "google-map-react": "2.1.9",
+    "i18next": "19.8.5",
     "next": "10.0.3",
     "next-fonts": "1.5.1",
     "next-images": "1.6.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-i18next": "11.8.5",
     "react-scroll": "1.8.1",
     "styled-components": "5.2.1"
   },

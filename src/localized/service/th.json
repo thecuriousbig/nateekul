@@ -1,0 +1,9 @@
+{
+  "options": {
+    "plastic_hole_tray": "Plastic Hole Tray ( ถาดบรรจุสินค้า )",
+    "blister_pack": "Blister Pack (บรีสเตอร์แพค)",
+    "slide_pack": "Slide Pack (งานขึ้นรูปพับขอบ)",
+    "packing_clamshell": "Packing Clamshell (งานขึ้นรูปดับเบิลแพค)",
+    "lid": "Lids (ฝา)"
+  }
+}

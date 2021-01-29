@@ -40,11 +40,11 @@
       "@services/*": [
         "./src/services/*"
       ],
-      "@constants/*": [
-        "./src/constants/*"
+      "@constants": [
+        "./src/constants"
       ],
-      "@locales/*": [
-        "./src/localized/*"
+      "@localized": [
+        "./src/localized"
       ],
       "@context/*": [
         "./src/context/*"

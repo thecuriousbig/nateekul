@@ -5,6 +5,7 @@ import { Text } from '@components/Text'
 import { LineButton } from '@components/LineButton'
 
 import MainBackgroundImage from '@public/static/images/main.jpg'
+import { useTranslation } from '@localized'
 
 const SContainer = styled(Container)`
   display: flex;
@@ -17,14 +18,15 @@ const SContainer = styled(Container)`
 `
 
 const Main: React.FC = () => {
+  const { t } = useTranslation('main')
   return (
     <Section sectionID="Main" height="32rem" backgroundImage={{ src: MainBackgroundImage, positionX: 'left' }}>
       <SContainer>
         <Text size="hero" color="white" font="Supermarket">
-          รับขึ้นรูปบรรจุภัณฑ์พลาสติก
+          {t('title')}
         </Text>
         <Text size="lg" color="white">
-          โรงงานบรรจุภัณฑ์ พลาสติกวัสดุ PVC PET PS PP ตามความต้องการของลูกค้า
+          {t('subtitle')}
         </Text>
         <LineButton />
       </SContainer>

@@ -17,6 +17,7 @@ module.exports = withImages(
     // to the client code
     env: {
       GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY,
+      GOOGLE_MAPS_URL: process.env.GOOGLE_MAPS_URL,
     },
   })
 )

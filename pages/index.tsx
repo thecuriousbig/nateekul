@@ -6,7 +6,6 @@ import { About } from '@layouts/About'
 import { Product } from '@layouts/Product'
 import { Contact } from '@layouts/Contact'
 import { Section } from '@components/Section'
-import { COLORS } from '@constants/color'
 
 const Home: React.FC = () => {
   return (

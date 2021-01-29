@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { Section } from '@components/Section'
 import { Container } from '@components/Container'
 import { Text } from '@components/Text'
-import { COLORS } from '@constants/color'
+import { COLORS } from '@constants'
+import { useTranslation } from '@localized'
 
 const SContainer = styled(Container)`
   display: flex;
@@ -41,10 +42,11 @@ const SloganText = styled(Text)`
 const Icon = styled(Image)``
 
 const Slogan: React.FC = () => {
+  const { t } = useTranslation('slogan')
   const slogan = [
-    { id: 1, text: 'บริการรวมเร็วฉับไว', icon: '/static/icons/slogan_1.svg' },
-    { id: 2, text: 'ใส่ใจในคุณภาพ', icon: '/static/icons/slogan_2.svg' },
-    { id: 3, text: 'ยินดีให้คำปรึกษาทุกท่าน', icon: '/static/icons/slogan_3.svg' }
+    { id: 1, text: t('slogan.a'), icon: '/static/icons/slogan_1.svg' },
+    { id: 2, text: t('slogan.b'), icon: '/static/icons/slogan_2.svg' },
+    { id: 3, text: t('slogan.c'), icon: '/static/icons/slogan_3.svg' }
   ]
   return (
     <Section sectionID="Slogan" backgroundColor={COLORS.SECONDARY.BLACK800} height="16rem">

@@ -1,24 +1,10 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Section } from '@components/Section'
 import { Container } from '@components/Container'
 import { GoogleMap } from '@components/Map'
 import { Text } from '@components/Text'
-import { COLORS } from '@constants/color'
-
-const contactData = [
-  { id: 'line', text: 'ไลน์: @nateekul_line' },
-  { id: 'telephone', text: 'เบอร์โทรศัพท์: (+66)80-999-0629 คุณคัจฉพงษ์ นทีแสนประเสริฐ' },
-  { id: 'address', text: 'ที่ตั้งบริษัท: 81/1103 ประชาอุทิศ79 ถนนประชาอุทิศ เขต/แขวง ทุ่งครุ กทมฯ 10140' },
-  { id: 'email', text: 'อีเมล์: nateekul@hotmail.com' }
-]
-
-const servicesData = [
-  'Plastic Hole Tray ( ถาดบรรจุสินค้า )',
-  'Blister Pack (บรีสเตอร์แพค)',
-  'Slide Pack (งานขึ้นรูปพับขอบ)',
-  'Packing Clamshell (งานขึ้นรูปดับเบิลแพค)',
-  'Lids (ฝา)'
-]
+import { COLORS } from '@constants'
+import { useTranslation } from '@localized'
 
 const SContainer = styled(Container)`
   display: flex;
@@ -45,13 +31,30 @@ const Title = styled(TextBlock)`
   margin: 0.75rem 0;
 `
 
-const Contact = () => {
+const Contact: React.FC = () => {
+  const { t } = useTranslation()
+
+  const contactData = [
+    { id: 'line', text: t('contact.options.line') },
+    { id: 'telephone', text: t('contact.options.tel') },
+    { id: 'address', text: t('contact.options.address') },
+    { id: 'email', text: t('contact.options.email') }
+  ]
+
+  const servicesData = [
+    'Plastic Hole Tray ( ถาดบรรจุสินค้า )',
+    'Blister Pack (บรีสเตอร์แพค)',
+    'Slide Pack (งานขึ้นรูปพับขอบ)',
+    'Packing Clamshell (งานขึ้นรูปดับเบิลแพค)',
+    'Lids (ฝา)'
+  ]
+
   return (
     <Section sectionID="Contact" height="25rem" backgroundColor={COLORS.PRIMARY.BLACK}>
       <SContainer>
         <Content>
           <Title size="lg" color="white">
-            ติดต่อเรา
+            {t('contact.title')}
           </Title>
           {contactData.map(({ id, text }) => (
             <TextBlock size="sm" color="white" key={id}>

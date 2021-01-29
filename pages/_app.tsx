@@ -3,6 +3,7 @@ import Head from 'next/head'
 import GlobalStyle from '@styles/global'
 import { ThemeProvider } from 'styled-components'
 import theme from '@styles/theme'
+import '@localized'
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (

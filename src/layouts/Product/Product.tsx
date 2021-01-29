@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import { Section } from '@components/Section'
 import { Card } from '@components/Card'
 import { Text } from '@components/Text'
-import { COLORS } from '@constants/color'
+import { COLORS } from '@constants'
+import { useTranslation } from '@localized'
 
 import Example1 from '@public/static/images/example1.jpg'
 import Example2 from '@public/static/images/example2.jpg'
@@ -52,10 +53,11 @@ const Title = styled(Text)`
 `
 
 const Product: React.FC = () => {
+  const { t } = useTranslation('product')
   return (
     <Section sectionID="Products" height="30rem" backgroundColor={COLORS.PRIMARY.WHITE}>
       <Title color="black" size="4xl" font="Supermarket">
-        ตัวอย่างผลิตภัณฑ์
+        {t('title')}
       </Title>
       <CardList>
         {productExample.map(({ id, name, description, image }) => (

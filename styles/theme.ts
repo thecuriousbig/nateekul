@@ -1,5 +1,5 @@
 import { DefaultTheme } from 'styled-components'
-import { COLORS } from '@constants/color'
+import { COLORS } from '@constants'
 
 const theme: DefaultTheme = {
   colors: {

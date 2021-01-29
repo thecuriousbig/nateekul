@@ -1,5 +1,12 @@
 import styled from 'styled-components'
 
+type Props = {
+  lat: number
+  lng: number
+  color: string
+  name: string
+}
+
 const SMarker = styled('div')`
   .pin {
     width: 30px;
@@ -65,8 +72,7 @@ const SMarker = styled('div')`
   }
 `
 
-const Marker = (props: any) => {
-  const { color, name, id } = props
+const Marker: React.FC<Props> = ({ color, name }) => {
   return (
     <SMarker>
       <div className="pin" style={{ backgroundColor: color, cursor: 'pointer' }} title={name} />
