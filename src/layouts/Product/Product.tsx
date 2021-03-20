@@ -39,29 +39,40 @@ const productExample = [
 
 const CardList = styled('div')`
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: stretch;
-  padding: 2rem;
-  margin-top: 2rem;
+  padding: 2rem 0rem 4rem;
 `
 
 const Title = styled(Text)`
-  margin-top: 2rem;
+  padding: 2rem 0rem;
   display: block;
   text-align: center;
+`
+
+const CardItem = styled(Card)`
+  margin: 1rem;
 `
 
 const Product: React.FC = () => {
   const { t } = useTranslation('product')
   return (
-    <Section sectionID="Products" height="30rem" backgroundColor={COLORS.PRIMARY.WHITE}>
+    <Section sectionID="Products" backgroundColor={COLORS.PRIMARY.WHITE}>
       <Title color="black" size="4xl" font="Supermarket">
         {t('title')}
       </Title>
       <CardList>
         {productExample.map(({ id, name, description, image }) => (
-          <Card key={id} title={name} description={description} image={image} height={200} width={270} />
+          <CardItem
+            key={id}
+            title={name}
+            description={description}
+            image={image}
+            imageWidth="100%"
+            imageHeight={254}
+            cardWidth="270px"
+          />
         ))}
       </CardList>
     </Section>

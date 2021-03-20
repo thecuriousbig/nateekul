@@ -5,7 +5,6 @@ import { About } from '@layouts/About'
 import { Product } from '@layouts/Product'
 import { ServiceType } from '@layouts/ServiceType'
 import { Contact } from '@layouts/Contact'
-import { Section } from '@components/Section'
 
 const Home: React.FC = () => {
   return (
@@ -14,11 +13,6 @@ const Home: React.FC = () => {
       <Main />
       <Slogan />
       <About />
-      {/* <Section
-        sectionID="Divider"
-        backgroundColor="linear-gradient(180deg, rgba(196, 196, 196, 0) 43.23%, #c4c4c4 100%);"
-        height="10rem"
-      /> */}
       <Product />
       <ServiceType />
       <Contact />
