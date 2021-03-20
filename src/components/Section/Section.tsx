@@ -8,7 +8,7 @@ import styled, { css, ThemedCssFunction } from 'styled-components'
     attachment = 'fixed'
  */
 type styledProps = {
-  height: string
+  height?: string
   backgroundImage?: {
     src?: string
     repeat?: string
@@ -23,7 +23,7 @@ type Props = {
   sectionID: string
 } & styledProps
 
-const PageSection = styled('section') <styledProps>`
+const PageSection = styled('section')<styledProps>`
   width: 100%;
   height: ${(props) => props.height};
   margin: auto;

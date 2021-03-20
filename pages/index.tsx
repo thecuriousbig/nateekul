@@ -14,11 +14,11 @@ const Home: React.FC = () => {
       <Main />
       <Slogan />
       <About />
-      <Section
+      {/* <Section
         sectionID="Divider"
         backgroundColor="linear-gradient(180deg, rgba(196, 196, 196, 0) 43.23%, #c4c4c4 100%);"
         height="10rem"
-      />
+      /> */}
       <Product />
       <ServiceType />
       <Contact />

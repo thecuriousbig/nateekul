@@ -10,12 +10,14 @@ const SContainer = styled(Container)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 4rem;
+  padding: 4rem 1rem;
 `
 const Title = styled('div')`
+  width: 40rem;
+  text-align: center;
   padding: 0.5rem 1rem;
   border: none;
-  border-bottom: 0.25rem solid ${(props) => props.theme.colors.secondary.BLACK300};
+  border-left: 1rem solid ${(props) => props.theme.colors.secondary.BLUE200};
 `
 
 const Content = styled('div')`
@@ -34,10 +36,10 @@ const Paragraph = styled(Text)`
 const About: React.FC = () => {
   const { t } = useTranslation('about')
   return (
-    <Section sectionID="About" height="25rem" backgroundColor={COLORS.PRIMARY.WHITE}>
+    <Section sectionID="About" backgroundColor={COLORS.PRIMARY.WHITE}>
       <SContainer>
         <Title>
-          <Text size="4xl" color="black" font="Supermarket">
+          <Text size="4xl" color="blue200" font="Supermarket">
             {t('title')}
           </Text>
         </Title>
