@@ -5,10 +5,10 @@ import { Text } from '@components/Text'
 import { COLORS } from '@constants'
 import { useTranslation } from '@localized'
 
-import Example1 from '@public/static/images/example1.jpg'
-import Example2 from '@public/static/images/example2.jpg'
-import Example3 from '@public/static/images/example3.jpg'
-import Example4 from '@public/static/images/example4.jpg'
+import Example1 from '@public/static/images/example/example1.jpg'
+import Example2 from '@public/static/images/example/example2.jpg'
+import Example3 from '@public/static/images/example/example3.jpg'
+import Example4 from '@public/static/images/example/example4.jpg'
 
 const productExample = [
   {

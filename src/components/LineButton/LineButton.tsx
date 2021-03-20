@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import { Button } from '@components/Button'
 import { Text } from '@components/Text'
-import LineIcon from '@public/static/images/line_base.png'
-import LineHoverIcon from '@public/static/images/line_hover.png'
-import LinePressIcon from '@public/static/images/line_press.png'
+import LineIcon from '@public/static/images/line/line_base.png'
+import LineHoverIcon from '@public/static/images/line/line_hover.png'
+import LinePressIcon from '@public/static/images/line/line_press.png'
 
 type Props = {
   className?: string
