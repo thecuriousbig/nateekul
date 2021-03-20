@@ -1,9 +1,9 @@
-import { css } from 'styled-components'
 import { Main } from '@layouts/Main'
 import { Navigator } from '@components/Navigator'
 import { Slogan } from '@layouts/Slogan'
 import { About } from '@layouts/About'
 import { Product } from '@layouts/Product'
+import { ServiceType } from '@layouts/ServiceType'
 import { Contact } from '@layouts/Contact'
 import { Section } from '@components/Section'
 
@@ -20,6 +20,7 @@ const Home: React.FC = () => {
         height="10rem"
       />
       <Product />
+      <ServiceType />
       <Contact />
     </>
   )

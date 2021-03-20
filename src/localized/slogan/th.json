@@ -1,7 +1,12 @@
 {
-  "slogan": {
-    "a": "บริการรวมเร็วฉับไว",
-    "b": "ใส่ใจในคุณภาพ",
-    "c": "ยินดีให้คำปรึกษาทุกท่าน"
+  "title": {
+    "fastService": "บริการรวมเร็วฉับไว",
+    "qualityCare": "ใส่ใจในคุณภาพ",
+    "consultance": "ยินดีให้คำปรึกษาทุกท่าน"
+  },
+  "subtitle": {
+    "fastService": "Prompt service",
+    "qualityCare": "Quality care",
+    "consultance": "Strategically consultance"
   }
 }
