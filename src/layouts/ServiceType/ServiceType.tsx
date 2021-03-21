@@ -52,20 +52,20 @@ const ServiceType: React.FC = () => {
       description: t('options.plasticHoleTray.description'),
       image: HoleTray
     },
-    {
-      id: 2,
-      title: t('options.lids.title'),
-      subtitle: t('options.lids.subtitle'),
-      description: t('options.lids.description'),
-      image: dummy
-    },
-    {
-      id: 3,
-      title: t('options.foldingBox.title'),
-      subtitle: t('options.foldingBox.subtitle'),
-      description: t('options.foldingBox.description'),
-      image: dummy
-    },
+    // {
+    //   id: 2,
+    //   title: t('options.lids.title'),
+    //   subtitle: t('options.lids.subtitle'),
+    //   description: t('options.lids.description'),
+    //   image: dummy
+    // },
+    // {
+    //   id: 3,
+    //   title: t('options.foldingBox.title'),
+    //   subtitle: t('options.foldingBox.subtitle'),
+    //   description: t('options.foldingBox.description'),
+    //   image: dummy
+    // },
     {
       id: 4,
       title: t('options.blisterPack.title'),

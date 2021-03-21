@@ -17,6 +17,7 @@ const LineButtonWithStyle = styled(Button)`
   flex-direction: row;
   justify-content: flex-start;
   padding: 0;
+  cursor: pointer;
   background-color: ${(props) => props.theme.colors.line.GREEN200};
   :hover {
     background-color: ${(props) => props.theme.colors.line.GREEN100};

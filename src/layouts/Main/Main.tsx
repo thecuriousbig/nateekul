@@ -3,7 +3,7 @@ import { Section } from '@components/Section'
 import { Container } from '@components/Container'
 import { Text } from '@components/Text'
 import { LineButton } from '@components/LineButton'
-
+import { FacebookButton } from '@components/FacebookButton'
 import MainBackgroundImage from '@public/static/images/main.jpg'
 import { useTranslation } from '@localized'
 
@@ -29,6 +29,7 @@ const Main: React.FC = () => {
           {t('subtitle')}
         </Text>
         <LineButton />
+        <FacebookButton />
       </SContainer>
     </Section>
   )
