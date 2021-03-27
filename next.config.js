@@ -18,6 +18,8 @@ module.exports = withImages(
     env: {
       GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY,
       GOOGLE_MAPS_URL: process.env.GOOGLE_MAPS_URL,
+      FACEBOOK_URL: process.env.FACEBOOK_URL,
+      LINE_URL: process.env.LINE_URL
     },
   })
 )

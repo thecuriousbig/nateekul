@@ -19,6 +19,9 @@ const SContainer = styled(Container)`
 
 const Main: React.FC = () => {
   const { t } = useTranslation('main')
+
+  const handleButtonClick = (url) => window.open(url)
+
   return (
     <Section sectionID="Main" height="32rem" backgroundImage={{ src: MainBackgroundImage, positionX: 'left' }}>
       <SContainer>
@@ -28,8 +31,8 @@ const Main: React.FC = () => {
         <Text size="lg" color="white">
           {t('subtitle')}
         </Text>
-        <LineButton />
-        <FacebookButton />
+        <LineButton onClick={() => handleButtonClick(process.env.LINE_URL)} />
+        <FacebookButton onClick={() => handleButtonClick(process.env.FACEBOOK_URL)} />
       </SContainer>
     </Section>
   )
