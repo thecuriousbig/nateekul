@@ -9,7 +9,6 @@ import HoleTray from '@public/static/images/serviceType/holetray.jpg'
 import BlisterPack from '@public/static/images/serviceType/blisterpack.jpg'
 import SlidePack from '@public/static/images/serviceType/slidepack.jpg'
 import Clamshell from '@public/static/images/serviceType/clamshell.jpg'
-import dummy from '@public/static/images/serviceType/clamshell.jpg'
 
 const Title = styled(Text)`
   display: block;

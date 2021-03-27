@@ -1,4 +1,4 @@
-import styled, { css, ThemedCssFunction } from 'styled-components'
+import styled, { css } from 'styled-components'
 
 /**
  *  src: string,
@@ -16,7 +16,7 @@ type styledProps = {
     positionY?: string
     attachment?: string
   } | null
-  backgroundColor?: string | ThemedCssFunction | null
+  backgroundColor?: string | null
 }
 
 type Props = {

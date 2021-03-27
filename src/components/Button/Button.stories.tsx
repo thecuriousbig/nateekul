@@ -1,10 +1,16 @@
-// import { storiesOf } from '@storybook/react'
-// import Button from './Button'
+import { storiesOf } from '@storybook/react'
+import Button from './Button'
 
-// storiesOf('Button', module).add('with text', () => {
-//   return <Button text="Hello world" />
-// })
+storiesOf('Button', module).add('with text', () => {
+  return <Button>button</Button>
+})
 
-// storiesOf('Button', module).add('with emoji', () => {
-//   return <Button text="😀 😎 👍 💯" />
-// })
+storiesOf('Button', module).add('with emoji', () => {
+  return (
+    <Button>
+      <span role="img" aria-label="emoji">
+        😀 😎 👍 💯
+      </span>
+    </Button>
+  )
+})
