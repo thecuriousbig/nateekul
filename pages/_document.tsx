@@ -1,11 +1,11 @@
-import NextDocument, { DocumentContext, Html, Head, Main, NextScript } from 'next/document'
+import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import { GA_TRACKING_ID } from '@utils/gtag'
 
 type Props = {
   isProduction: boolean
 }
-class Document extends NextDocument<Props> {
+class MyDocument extends Document<Props> {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
@@ -68,4 +68,4 @@ class Document extends NextDocument<Props> {
   }
 }
 
-export default Document
+export default MyDocument
